@@ -1,4 +1,4 @@
-### Khmer Normalizer 
+## Khmer Normalizer 
 
 A missing toolkit for **Khmer Natural Language Processing**.
 
@@ -13,6 +13,14 @@ A missing toolkit for **Khmer Natural Language Processing**.
 - Unicode Normalization (NFKC)
 - Quotes symbols normalization
 - Remove repeated punctuations
+
+### Installation
+
+```shell
+pip install khmernormalizer
+```
+
+### Usage
 
 ```python
 from khmernormalizer import normalize
