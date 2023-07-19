@@ -1,3 +1,3 @@
-__version__ = "0.0.1"
-
-from khmernormalizer import *
+__version__ = "0.0.2"
+from khmernormalizer.mappings import *
+from khmernormalizer.normalizer import *
