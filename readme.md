@@ -25,7 +25,18 @@ pip install khmernormalizer
 ```python
 from khmernormalizer import normalize
 
-text = "hello, world សួស្តី​ពិភពលោក !!!! 🇰🇭"
-result = normalize(text)
-# -> "hello, world សួស្តី​ពិភពលោក!"
+input_str = """
+តាម៖៖​សេចក្តី​រាយ​ការណ៍​​ឲ្យ​ដឹង​ថា!!!!!
+https://google.com/a?x=1
+កាល 😂 ពីវេលាម៉ោង    ៗ      ប្រមាណ១១យប់ថ្ងៃទី៤ 😂😂😂😂😂 ??
+កាាាាត់
+មិិិិិន 
+មួយរយះះះះះះះ
+រយះពេល
+""".strip()
+
+normalize(input_str, 
+          emoji_replacement="", 
+          remove_zwsp=True, 
+          url_replacement="")
 ```
