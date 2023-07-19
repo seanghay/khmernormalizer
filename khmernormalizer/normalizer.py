@@ -3,6 +3,7 @@
 from ftfy import fix_text, TextFixerConfig
 from emoji import replace_emoji
 from khmernormalizer import mappings
+
 import re
 import unicodedata
 
@@ -33,6 +34,8 @@ def normalize(
   text = fix_text(text, config=fix_text_config)
   text = fix_quotes(text)
   text = mappings.MULTIPLE_PUNCT_REGEX.sub(r"\1", text)
+  text = clean_khmer_trailing_vowels(text)
+  text = unicodedata.normalize(unicode_norm, text)
   
   if emoji_replacement is not None:
     text = replace_emoji(text, emoji_replacement)
@@ -48,9 +51,6 @@ def normalize(
       ), 
       text
   )
-  
-  text = clean_khmer_trailing_vowels(text)
-  text = unicodedata.normalize(unicode_norm, text)
   
   # remove duplicate whitespace but not newlines
   text = mappings.WHITESPACES_HANDLER_REGEX.sub(" ", text)
