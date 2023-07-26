@@ -80,7 +80,7 @@ def charcat(c):
         return Cats.ZFCoeng
     return Cats.Other
 
-def khnormal(txt, lang="km"):
+def khmer_normalize(txt, lang="km"):
     ''' Returns khmer normalised string, without fixing or marking errors'''
     # Mark final coengs in Middle Khmer
     if lang == "xhm":
