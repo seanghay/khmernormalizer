@@ -3,6 +3,7 @@
 from ftfy import fix_text, TextFixerConfig
 from emoji import replace_emoji
 from khmernormalizer import mappings
+from khnormal import khnormal
 
 import re
 import unicodedata
@@ -64,4 +65,4 @@ def normalize(
   # remove space between the repeat char
   text = re.sub(r"[^\S\r\n]+ៗ", "ៗ", text)
   
-  return text.strip()
+  return khnormal(text.strip())
