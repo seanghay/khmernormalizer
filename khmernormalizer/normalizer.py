@@ -30,7 +30,7 @@ def normalize(
 ):
   
   if remove_zwsp:
-    text = re.sub(r"[\u200b\u200a\u2028]", "", text)
+    text = re.sub(r"[\u200a\u200b\u200c\u200d\u2028\ufeff]", "", text)
   
   text = fix_text(text, config=fix_text_config)
   text = fix_quotes(text)
