@@ -516,16 +516,6 @@ CHAR_REPLACEMENTS = str.maketrans({
 
 UNICODE_REPLACEMENTS = {
     "\u00ad": "",
-    "\u09af\u09bc": "\u09df",
-    "\u09a2\u09bc": "\u09dd",
-    "\u09a1\u09bc": "\u09dc",
-    "\u09ac\u09bc": "\u09b0",
-    "\u09c7\u09be": "\u09cb",
-    "\u09c7\u09d7": "\u09cc",
-    "\u0985\u09be": "\u0986",
-    "\u09c7\u0981\u09d7": "\u09cc\u0981",
-    "\u09c7\u0981\u09be": "\u09cb\u0981",
-    "\u09c7([^\u09d7])\u09d7": "\\g<1>\u09cc",
     "\u00a0": " ",
     "\u200b": "",
     "\u2060": "",
