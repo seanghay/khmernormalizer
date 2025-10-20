@@ -618,7 +618,6 @@ UNICODE_REPLACEMENTS = {
     
 }
 
-UNICODE_REPLACEMENTS_REGEX = re.compile("|".join(UNICODE_REPLACEMENTS.keys()))
 
 
 DOUBLE_QUOTE_REGEX = re.compile("|".join([

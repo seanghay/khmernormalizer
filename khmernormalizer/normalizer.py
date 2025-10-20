@@ -46,12 +46,8 @@ def normalize(
   
   text = text.translate(mappings.CHAR_REPLACEMENTS)
   
-  text = mappings.UNICODE_REPLACEMENTS_REGEX.sub(
-      lambda match: mappings.UNICODE_REPLACEMENTS.get(
-        match.group(0), f"{match.group(1)}\u09cc"
-      ), 
-      text
-  )
+  for old, new in mappings.UNICODE_REPLACEMENTS.items():
+      text = text.replace(old, new)
   
   # remove duplicate whitespace but not newlines
   text = mappings.WHITESPACES_HANDLER_REGEX.sub(" ", text)
