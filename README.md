@@ -51,3 +51,7 @@ Result:
 មួយរយៈ
 រយៈពេល
 ```
+
+### Reference
+
+- [sillsdev/khmer-character-specification](https://github.com/sillsdev/khmer-character-specification)
